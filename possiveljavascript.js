@@ -1,1 +1,10 @@
-//ainda não sei se vamos ter alguma coisa com java script mas ja deixa aí o arquivo bjos
+let btn = document.querySelector("#btn");
+let sidebar = document.querySelector(".sidebar");
+let searchBtn = document.querySelector(".bx-search-alt");
+
+btn.onclick = function() {
+    sidebar.classList.toggle("active");
+}
+searchBtn.onclick = function() {
+    sidebar.classList.toggle("active");
+}
