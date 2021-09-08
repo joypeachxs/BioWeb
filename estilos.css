@@ -41,9 +41,13 @@ body {
 .sidebar.active .logo_content .logo {
     opacity: 1;
     pointer-events: none;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    transition: all 0.4s ease;
 }
 
-.logo_content .logo i {
+.logo_content .logo img {
     font-size: 28px;
     margin-right: 5px;
 }
@@ -188,7 +192,7 @@ body {
     margin: 12px;
 }
 
-.sidebar.active ~ .home_content {
+.sidebar.active~.home_content {
     width: calc(100% - 240px);
     left: 240px;
 }
