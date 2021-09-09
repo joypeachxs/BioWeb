@@ -1,0 +1,468 @@
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+.sidebar .logo_content .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.logo_content .logo img {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #fff;
+    top: 6px;
+    left: 50%;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 122px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+}
+
+.sidebar ul li input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.sidebar ul li .bx-search-alt {
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li .bx-search-alt:hover {
+    background: #fff;
+    color: #1d1b31;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover {
+    color: #11101d;
+    background: #fff;
+}
+
+.sidebar ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.sidebar .links_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.home_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active~.home_content {
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+header {
+    background-color: rgb(29, 202, 52);
+    top: 0;
+    width: 100%;
+    height: 160px;
+}
+
+#logono {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 5px;
+    left: 45%;
+    display: flex;
+}
+
+#trailer {
+    position: absolute;
+    top: 0px;
+}
+
+.home_content {
+    background-image: url(imgs/wallpaper2.jpg);
+}
+
+.botaostart {
+    position: absolute;
+    left: 48%;
+    display: inline-block;
+    animation: pulse 0.7s infinite;
+    top: 480px;
+}
+
+.home_content .botaostart a img {
+    border: 5px rgb(233, 211, 155) solid;
+    border-radius: 20%;
+    background-color: rgb(233, 225, 204);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+
+.home_content {
+    position: absolute;
+    overflow: auto;
+    height: 100%;
+}
+
+.sobre {
+    position: absolute;
+    top: 600px;
+    background-color: white;
+    width: 100%;
+    height: 500px;
+}
+
+.sobre>h1 {
+    position: absolute;
+    right: 200px;
+    top: 30px;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(3, 87, 87);
+}
+
+.sobre>img {
+    position: absolute;
+    left: 150px;
+    top: 30px;
+}
+
+.sobre>p {
+    position: absolute;
+    right: 200px;
+    left: 600px;
+    top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(18, 133, 85);
+    text-align: right;
+    font-size: 18px;
+}
+
+#wallpaper1 {
+    position: absolute;
+    top: 1050px;
+    height: 600px;
+    width: 100%;
+}
+
+.botanica {
+    position: absolute;
+    top: 1200px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 500px;
+    align-items: center;
+}
+
+.botanica>h1 {
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(3, 87, 87);
+    position: absolute;
+    left: 100px;
+    top: 130px
+}
+
+.botanica>p {
+    position: absolute;
+    left: 100px;
+    right: 600px;
+    top: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(18, 133, 85);
+    text-align: left;
+    font-size: 18px;
+}
+
+.botanica>img {
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    right: 50px;
+    top: 120px;
+}
+
+#wallpaper2 {
+    position: absolute;
+    top: 2100px;
+    width: 100%;
+}
+
+.caracteristicas {
+    position: absolute;
+    top: 1800px;
+    background-color: #fff;
+    width: 100%;
+    height: 550px;
+}
+
+.caracteristicas>h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(3, 87, 87);
+}
+
+.caracteristicas>h2 {
+    position: absolute;
+    left: 850px;
+    margin-right: 150px;
+    margin-top: 80px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(3, 87, 87);
+}
+
+.caracteristicas #celulavegetal {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    top: 100px;
+    left: 10px;
+}
+
+.caracteristicas>p {
+    position: absolute;
+    left: 700px;
+    padding: 20px;
+    top: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(18, 133, 85);
+    text-align: center;
+    font-size: 18px;
+}
+
+.carac2 {
+    position: absolute;
+    top: 2450px;
+    background-color: #fff;
+    width: 100%;
+    height: 506px;
+}
+
+.carac2>h2 {
+    position: absolute;
+    left: 150px;
+    margin-right: 150px;
+    margin-top: 150px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(3, 87, 87);
+}
+
+.carac2>p {
+    position: absolute;
+    left: 60px;
+    right: 700px;
+    top: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(18, 133, 85);
+    text-align: center;
+    font-size: 18px;
+}
+
+.carac2 #partes {
+    position: absolute;
+    left: 600px;
+    top: 80px;
+}
+
+.carac2 #chao {
+    position: absolute;
+    left: 50px;
+    top: 356px;
+}
+
+#wallpaper3 {
+    position: absolute;
+    top: 3300px;
+    width: 100%;
+}
+
+.carac3 {
+    position: absolute;
+    top: 3000px;
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+}
+
+.carac3 ul {
+    list-style-type: circle;
+    position: absolute;
+    top: 100px;
+    left: 600px;
+    text-align: left;
+}
+
+.carac3 ul li {
+    color: rgb(18, 133, 85);
+}
+
+.carac3 #imgcarac3 {
+    position: absolute;
+    top: 30px;
+    height: 400px;
+    width: 400px;
+    left: 80px;
+}
+
+#topo {
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#topo:hover {
+    text-decoration: none;
+}
