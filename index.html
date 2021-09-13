@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- LINK DO BANCO DE IMAGENS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="imgs/LOGO TP1 PNG.png" />
+    <title>BioWeb</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <img src="imgs/leaf (1).png" width="24px" height="24px" alt="Imagem de uma folha em forma de ícone.">
+                <div class="logo_name">BioWeb</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <nav>
+            <ul class="nav_list">
+                <li>
+                    <a href="#botanicatitle">
+                        <i class='bx bx-question-mark'></i>
+                        <span class="links_name">O que é Botânica</span>
+                    </a>
+                    <span class="tooltip">O que é?</span>
+                </li>
+                <li>
+                    <a href="#caracteristicastitle">
+                        <i class='bx bx-dna'></i>
+                        <span class="links_name">Características</span>
+                    </a>
+                    <span class="tooltip">Características</span>
+                </li>
+                <li>
+                    <a href="#curiosidadesstitle">
+                        <i class='bx bx-news'></i>
+                        <span class="links_name">Curiosidades</span>
+                    </a>
+                    <span class="tooltip">Curiosidades</span>
+                </li>
+                <li>
+                    <a href="#titulo-importancia">
+                        <i class='bx bx-heart-circle'></i>
+                        <span class="links_name">Importância</span>
+                    </a>
+                    <span class="tooltip">Importância</span>
+                </li>
+                <li>
+                    <a href="#cronologiatitle">
+                        <i class='bx bx-time-five'></i>
+                        <span class="links_name">Cronologia</span>
+                    </a>
+                    <span class="tooltip">Cronologia</span>
+                </li>
+                <li>
+                    <a href="bibliografia.html">
+                        <i class='bx bx-spreadsheet'></i>
+                        <span class="links_name">Bibliografia</span>
+                    </a>
+                    <span class="tooltip">Bibliografia</span>
+                </li>
+                <li>
+                    <a href="participantes.html">
+                        <i class='bx bxs-group'></i>
+                        <span class="links_name">Participantes</span>
+                    </a>
+                    <span class="tooltip">Participantes</span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="home_content">
+        <header>
+            <div class="videocabeca" id="top">
+                <iframe id="trailer" width="100%" height="600px" src="https://www.youtube.com/embed/t-gZtyd3RgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="botaostart" id="btntopo">
+                <a href="#oquee">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAAA6VJREFUeF7t3M1qF0EQBPDKowmC+C4eclBQQVQCKih48F08iOCjKYMuhGDSPbPzVfWvveTSm+2u3/YmZJNcwYd0AlfS03k4GFj8JjCwgcUTEB/PG2xg8QTEx/MGG1g8AfHxvMEGFk9AfDxvsIHFExAfzxtsYPEExMfzBhtYPAHx8bzBBhZPQHw8b7CBxRMQH88bbGDxBMTH8wYbWDwB8fG8wQYWT0B8PG+wgcUTEB/PG2xg6gR+J7uXvdFlB/sHa+DkHc5aZmBWuWTfBk4GxVpmYFa5ZN8GTgbFWmZgVrlk3wZOBsVaZmBWuWTfBk4GxVpmYFa5ZN8GTgbFWmZgVrlk3wZOBsVaZmBWuWTfBk4GxVpmYFa5ZN8GTgbFWmZgVrlk3wZOBsVaZmBWuWTfBk4GxVpmYFa5ZN8GTgbFWmZgVrlk3wZOBjW67BGAXwMushL4MYCfA2aq+pQ7/GXDcwCfAXwC8Kqq+7h4FfBXANcAXgD4Erc5rmI18IF7TNgbeQXwgXvMtBR5JfA7AG//c+/2RJ4NfBd3OfIq4PJILtt739ELeSbwRwAvH5jpPYByU089VgBHuD0f17OAI9xjpvL1uDyypx2zgbO4vZBnAGdxlyDPBH4K4HvDrVsCfN1wXjllNHAt7jHGEwA/GmeqOm0mcGnsG4BnVR3+LW79mjwSuBV36mN6NvBs5FHAFLgl7BXAM5FHANPgrgQu1679hqvlG6/ewFS4q4FnIPcEpsPdAXg0ci9gStxdgEci9wCmxd0JeBTyWWBq3N2ARyCfAabH3RG4N3IrsATursA9kVuAZXB3Bu6FXAsshbs7cA/kGmA5XAbg0uOHxt/VKi/Xsy/YbwC8aXgJcuZNV8Pl6k9Z9bPo2k5bf6xZe52a+qlvhWoau13LAnzmcd2azUPnUeCyPKJvB73DJtPgMgKv3mQqXFbgVch0uMzAs5EpcdmBZyHT4ioAj0amxlUBHoVMj6sE3BtZAlcNuBeyDK4i8FlkKVxV4FZkOVxl4FpkSVx14CyyLO4lAEfI0riXAnwfsjzuJQHfRb4I3EsDPpDLx6n/RqFccNXB9BsdqzKivq6Bqfni5g0cZ0RdYWBqvrh5A8cZUVcYmJovbt7AcUbUFQam5oubN3CcEXWFgan54uYNHGdEXWFgar64eQPHGVFXGJiaL27ewHFG1BUGpuaLmzdwnBF1hYGp+eLmDRxnRF1hYGq+uHkDxxlRVxiYmi9u3sBxRtQVfwC6NKp5v5rV1AAAAABJRU5ErkJggg=="
+                    />
+                </a>
+            </div>
+        </header>
+        <main>
+            <section class="sobre">
+                <h1 id="oquee">
+                    O QUE É A BIOWEB?
+                </h1>
+                <img src="imgs/LOGO TP1 PNG.png" alt="LOGO DO PROJETO - CIRCULO COM FOLHA NO MEIO">
+                <p>
+                    A BioWeb foi criada com o intuito de ajudar os estudantes do primeiro ano do CEFET MG na matéria de Biologia, mais especificamente na área de <strong>botânica</strong>, que é o foco do site. Na composição do projeto nós utilizamos
+                    a linguagem <strong>HTML</strong>, combinada com <strong>CSS</strong> e <strong>JavaScript</strong>. Com a orientação do professor Flavio Coutinho, responsável pela disciplina de Programação Web, juntamente com o professor Vitor Hugo,
+                    professor de Biologia do CEFET MG, nós reunimos as informações e criamos o site.
+                </p>
+            </section>
+            <!-- <img id="wallpaper1" src="imgs/wallpaper1.jpg" alt="IMAGEM DE UM BOSQUE"> -->
+            <section class="botanica">
+                <h1 id="botanicatitle">O QUE É BOTÂNICA?</h1>
+                <p>A Botânica é a área da biologia que estuda o Reino Plantae, onde estão incluídos todos os vegetais. Nesse grupo encontramos seres autotróficos, eucariontes e multicelulares, ou seja, seres que produzem seu próprio alimento por meio da
+                    fotossíntese, apresentam células com núcleo delimitado pela carioteca e possuem mais de uma célula.</p>
+                <img src="imgs/botanica.jpg" alt="IMAGEM COM VÁRIAS PLANTAS DEMONSTRANDO O ESTUDO DAS PLANTAS">
+            </section>
+            <!-- <img src="imgs/wallpaper2.jpg" alt="IMAGEM DE UMA LAGOA PROXIMO A MONTANHAS" id="wallpaper2"> -->
+            <section class="caracteristicas">
+                <h1 id="caracteristicastitle">CARACTERÍSTICAS GERAIS</h1>
+                <h2 id="primeiracarac">CÉLULA VEGETAL</h2>
+                <img src="imgs/celula-vegetal-scaled.jpg" alt="IMAGEM EXPLICATIVA SOBRE A CÉLULA VEGETAL" id="celulavegetal">
+                <p>As plantas são constituídas por <strong>células vegetais.</strong> Elas diferenciam-se das células animais por possuírem cloroplastos, vacúolos e parede celular. Os cloroplastos são organelas exclusivas de células vegetais. É o local onde
+                    é encontrada a clorofila, o pigmento necessário para a realização da fotossíntese. Os vacúolos são responsáveis por armazenar substâncias e regular a entrada de água na célula. A parede celular dos vegetais é constituída pelo polissacarídeo
+                    celulose. Ela é responsável pela sustentação, resistência e proteção contra patógenos.
+                </p>
+            </section>
+            <section class="cronologia">
+                <h1 id="cronologiatitle">LINHA CRONÓLOGICA DAS PLANTAS</h2>
+                    <img src="imgs/exemplo_plantas.jpg" alt="IMAGENS DAS PLANTAS" id="plantas_cronologia">
+                    <ul>
+                        <li> <strong> Briófitas:</strong> São o grupo mais simples das plantas, já que não possuem nem frutos, nem flores, nem vasos condutores. Sua reprodução acontece a partir de metagênese, assim possuindo uma fase sexuada e outra assexuada.</li>
+                        <li> <strong> Pteridófitas: </strong> Esse grupo é um pouco mais evoluído que as briófitas, diferentemente das briófitas possuem vasos condutores, raiz, folhas e caule, porém sua reprodução ocorre da mesma forma que o primeiro grupo.</li>
+                        <li> <strong> Gimnospermas:</strong> São o segundo grupo mais evoluído, ficando atrás apenas da angiospermas. Devido à presença de flores e sementes isso possui uma maior variabilidade de espécies. Assim como as pteridófitas este grupo
+                            possui vasos condutores, raiz, folhas e caule. Sua reprodução ocorre apenas sexuadamente.</li>
+                        <li> <strong> Angiospermas:</strong> Grupo mais evoluído no reino vegetal, possuem todos os elementos das gimnospermas, além de terem frutos. As sementes das angiospermas possuem uma leve diferença que as das gimnospermas, que é o fato
+                            de estas serem envolvidas pelo ovário. Esse grupo é o maior do reino vegetal, contendo mais de 200 mil espécies. </li>
+                    </ul>
+            </section>
+            <section class="carac2">
+                <h2>PARTES DA PLANTA</h2>
+                <p>As partes da planta são: raízes, folhas, caule, flores e frutos. Cada parte desempenha uma função importante para o vegetal, assim como os órgãos do corpo humano.
+                </p>
+                <img src="imgs/partesdaplantadivisao-0-cke.jpg" alt="IMAGEM DEMONSTRANDO CADA PARTE DA PLANTA" id="partes">
+            </section>
+            <!-- <img src="imgs/ZMBC10.jpg" alt="WALLPAPER" id="wallpaper3"> -->
+            <section class="carac3">
+                <img src="imgs/511PQMT3GJL.png" alt="PIXELART DE UMA FLOR" id="imgcarac3">
+                <ul>
+                    <li><strong>Raiz:</strong> na maioria das plantas, é subterrânea e apresenta como funções principais a fixação da planta ao substrato e a absorção e condução de água e sais minerais.
+                    </li>
+                    <li><strong>Folhas:</strong> apresentam como função principal a realização de fotossíntese, sendo elas os órgãos em que está concentrada a maior quantidade de clorofila. Além disso, nas folhas também acontece respiração e transpiração.
+                    </li>
+                    <li><strong>Caule:</strong> atua ligando as raízes às folhas, promovendo a sustentação do vegetal, o transporte de substâncias e permitindo que as folhas estejam dispostas de forma a conseguirem maior contato com a luz solar.
+                    </li>
+                    <li><strong>Flores:</strong> são responsáveis pela reprodução da planta.
+                    </li>
+                    <li><strong>Frutos:</strong> são, geralmente, resultado do desenvolvimento do ovário após a fecundação e em seu interior é encontrado as sementes. Assim, com a sua dispersão é garantido a sobrevivência da espécie.</li>
+                </ul>
+            </section>
+            <section class="curiosidades">
+                <h1 id="curiosidadesstitle">CURIOSIDADES</h1>
+                <img src="imgs/vitóriarégia.jpg" alt="FOTO DE UMA VITÓRIA RÉGIA" id="vitoriaregia">
+                <img src="imgs/plantacarnivora.jpg" alt="FOTO DE PLANTAS CARNÍVORAS NEPENTÁCEAS" id="carnivora">
+                <ul>
+                    <li class=curios1>A maior espécie de árvore do mundo é a sequoia. Esta gigante é encontrada nos Estados Unidos e pode atingir até 110 metros de altura.</li>
+                    <li class=curios2>As plantas carnívoras nepentáceas são as que possuem a capacidade de comer animais de maior tamanho. Encontradas nas florestas tropicais da Ásia, estas plantas podem comer mamíferos de pequeno porte, sapos e até passadores pequenos.</li>
+                    <li class=curios3>A vitória régia é uma planta aquática que pode aguentar muito peso. Uma vitória-régia de grandes proporções pode aguentar até 40 kg (bem distribuídos pela superfície da folha).</li>
+                    <li class=curios4>As plantas medicinais mais usadas no mundo são: camomila (matricaria camomila), babosa (aloe vera), guaco (mikania glomerata), quebra-pedra (phillanthus niruri), boldo (plectranthus barbatus) e gengibre (zingiber officinale).</li>
+                </ul>
+            </section>
+            <section class="importancia">
+                <h1 id="titulo-importancia" class="titulo-importancia">Importância da Botânica</h1>
+                <p>
+                    As plantas são fundamentais para a vida na <strong>Terra</strong>. Elas nos proporcionam alimento, combustíveis, oxigênio e são primordiais para a manutenção do clima e das chuvas no planeta. Saber como podemos melhorar esses princípios,
+                    ou como desfrutar deles é a chave para o estudo da botânica. Podemos separar quatro particularidades básicas sobre a importância das plantas para a nossa sobrevivência:
+                </p>
+                <img src="/imgs/Floresta.png" alt="Apenas um monte de mato">
+            </section>
+            <section class="alimentos">
+                <h1 class="titulo-alimento">Alimentos</h1>
+                <p>
+                    De forma direta (através do consumo de frutas, vegetais etc), ou de forma indireta (através da carne), pois são o alimento de alguns animais. Elas são essenciais para que haja vida.
+                </p>
+                <img src="/imgs/Alimentos.png" alt="Tipos de alimentos">
+            </section>
+            <section class="mudancas-ambientais">
+                <h1 class="titulo-mudancas-ambientais">Mudanças ambientais</h1>
+                <p>
+                    O desmatamento, por exemplo, causa um grande impacto ambiental, uma vez que as plantas são responsáveis pela transformação do gás carbônico em oxigênio, ainda protegem matas ciliares e são abrigo para as mais diversas espécies de animais. Sem elas, há
+                    todo um desequilíbrio do ecossistema.
+                </p>
+                <img src="/imgs/desmatamento.png" alt="Queimadas de árvores">
+            </section>
+            <section class="remedios-e-materiais">
+                <h1 class="titulo-remedios-e-materiais">Remédios e materiais</h1>
+                <p>
+                    As plantas, em sua maioria, trazem propriedades que funcionam como remédios naturais. Até mesmo os industrializados possuem plantas em suas composições, como é o caso da aspirina, que era produzida originalmente através da casca do salgueiro. Outros materiais,
+                    como o algodão, a madeira, os óleos, também são extraídos a partir das plantas.
+                </p>
+                <img src="/imgs/plantação de algodão.png" alt="Plantação de algodão">
+            </section>
+            <section class="processos-fundamentais">
+                <h1 class="titulo-processos-fundamentais">Processos fundamentais</h1>
+                <p>
+                    É possível estudar através das plantas processo fundamentais, como subdivisão celular ou síntese das proteínas, sem bater de frente com os dilemas éticos que se formam ao estudar animais ou humanos. Foi justamente dessa forma que o botânico Gregor Mendel
+                    descobriu as leis da herança genética, ao cruzar diferentes espécies de ervilhas.
+                </p>
+                <img src="/imgs/Plantas.png" alt="Apenas uma planta">
+            </section>
+            <footer>
+                <img src="imgs/LOGO TP1 PNG.png" alt="LOGO DO PROJETO">
+            </footer>
+            <a id="topo" href="#trailer">🔼</a>
+        </main>
+        <script type="text/javascript " src="js/menu.js "></script>
+</body>
+
+</html>
