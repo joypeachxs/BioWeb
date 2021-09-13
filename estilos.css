@@ -14,7 +14,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 }
 
 html,
@@ -28,6 +29,7 @@ body {
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
+    font-family: "Poppins", sans-serif;
 }
 
 .sidebar {
@@ -249,7 +251,7 @@ header {
     right: 200px;
     top: 30px;
     font-size: 35px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', Times, serif;
     color: rgb(3, 87, 87);
 }
 
@@ -264,7 +266,7 @@ header {
     left: 600px;
     right: 200px;
     top: 100px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: rgb(18, 133, 85);
     text-align: right;
     font-size: 18px;
@@ -397,7 +399,7 @@ header {
     left: 700px;
     padding: 20px;
     top: 200px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     color: rgb(18, 133, 85);
     text-align: center;
     font-size: 18px;
